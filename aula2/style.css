@@ -1,0 +1,148 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    /* border: 1px solid #000; */
+    overflow: hidden;
+    /* background-color: #7fffd4; */
+}
+
+.container .bloco{
+    width: 33%;
+    text-align: center;
+    font-size: 82px;
+    font-weight: bold;
+    height: 180px;
+    background-color: #c2eedb;
+    border: 1px solid #000;
+    border-radius: 8px;
+    float: left;
+    margin-bottom: 10px;
+}
+/* Primeiro Elemento Filho */
+.container .bloco:first-child{
+    background-color: #acda92;
+}
+
+/* Último Elemento Filho */
+.container .bloco:last-child{
+    background-color: #ac94e6;
+}
+
+/* Elemento Específico */
+.container .bloco:nth-child(3){
+    background-color: #f0f1a9;
+}
+
+.container .bloco:nth-child(5){
+    background-color: #f1a9d5;
+    box-shadow: inset 4px 4px 8px #141314;
+}
+
+/* Elementos Filhos Pares */
+.container .bloco:nth-child(even){
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Elementos Filhos Impares */
+.container .bloco:nth-child(odd){
+    background-color: #c0b7b7;
+}
+
+.noticias{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.noticias p{
+    background-color: #e9e9e9;
+    border-bottom: 1px solid #999;
+    padding: 20px 10px;
+}
+
+/* Selecionando Filhos Diretos */
+.noticias > p{
+    background-color: #000;
+    color: #fff;
+}
+
+/* Seleciona o Irmão Adjacente */
+.destaque + p{
+    background-color: #9e80e4;
+}
+
+/* Seleciona Todos os Elementos Irmãos */
+.destaque ~ p{
+    color: aqua;
+}
+
+/* Pseudo-Elemento */
+.container > p{
+    font-family: verdana, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Seleciona a primeira Letra */
+.container > p::first-letter{
+    font-size: 42px;
+    font-weight: bold;
+    color: #333;
+    /* vertical-align: middle; */
+}
+
+/* Seleciona a primeira Linha */
+.container > p::first-line{
+    color: #333;
+    text-decoration: underline;
+}
+
+.container h1{
+    font: 42px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Muda o estilo de algum texto selecionado */
+.container h1::selection{
+    background-color: #9e80e4;
+    color: beige;
+}
+
+/* Insere um Elemento antes da tag selecionada */
+.container h1::before{
+    content: "Antes ";
+    color: brown;
+}
+
+.container h1::after{
+    content: " após";
+    color: brown;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 92px;
+    color: #999;
+}
+
+.container h2::before{
+    content: "";
+    width: 220px;
+    height: 3px;
+    background-color: brown;
+    display: block;
+    margin: 0 auto;
+}
+
+.container h2::after{
+    content: "";
+    width: 220px;
+    height: 3px;
+    background-color: brown;
+    display: block;
+    margin: 0 auto;
+}
