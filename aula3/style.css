@@ -36,9 +36,42 @@ h1{
 .pontos{
     width: 33.3%;
     float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.pontos .coluna{
+    max-height: 200px;
     overflow: hidden;
+}
+
+.pontos .coluna::before{
+    content: "";
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-color: #4e0563;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.pontos .coluna::after{
+    content: "";
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-color: #4e0563;
+    position: absolute;
+    bottom: 71px;
+    right: 5px;
 }
 
 .pontos img{
     width: 100%;
+    object-fit: cover;
+    z-index: 9;
+    position: relative;
 }
+
