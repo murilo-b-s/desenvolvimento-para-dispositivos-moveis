@@ -1,0 +1,224 @@
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.topo{
+    height: 200px;
+    background-color: #d3d1d1;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+nav{
+    background-color: #00b3f9;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+
+.menu{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 18px;
+}
+
+.menu li a{
+    color: #f7f7f7;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+
+.submenu ul{
+    width: 200px;
+    background-color: #ddd;
+    border: 1px solid #00b3f9;
+    border-radius: 0px 5px 5px 5px;
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    /* display: none; */
+    opacity: 0;
+    z-index: -1;
+    height: 0;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+    /* transition-delay: 1s;      Começa e Termina após o tempo que colocar */
+}
+
+.submenu li{
+    border-bottom: 1px dashed #999;
+    font-size: 18px;
+    width: 100%;
+    padding: 0 100%;
+    padding: 10px 0;
+}
+
+.submenu li:last-child{
+    border: none;
+}
+
+.submenu li a{
+    color: #333;
+}
+
+.submenu:hover ul{
+    opacity: 1;
+    z-index: 9;
+    height: 160px;
+}
+
+.menu li a:hover{
+    color: #333;
+}
+
+.principal h1{
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #333;
+}
+
+.tempos .carro img{
+    transition: all 10s linear;
+}
+
+.start:checked + .tempos .carro img{
+    margin-left: 80%;
+}
+
+.tempos .carro:first-child img{
+    transition-timing-function: ease;
+}
+
+.tempos .carro:nth-child(2) img{
+    transition-timing-function: ease-in;
+}
+
+.tempos .carro:nth-child(3) img{
+    transition-timing-function: ease-out;
+}
+
+.tempos .carro:nth-child(4) img{
+    transition-timing-function: linear;
+}
+
+.tempos .carro:nth-child(5) img{
+    transition-timing-function: cubic-bezier(0, 1.56, 0.98, 0.09);
+}
+
+
+.tarja{
+    background-color: #333;
+    padding: 80px;
+}
+
+.neon{
+    display: block;
+    text-decoration: none;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    color: #00b3f9;
+    margin: 0 auto;
+    font-size: 20px;
+    border: 2px solid #00b3f9;
+    transition: all 1s ease;
+}
+
+.neon:hover{
+    text-shadow: 0 0 12px #00b3f9;
+    box-shadow: 0 0 12px #00b3f9, inset 0 0 12px #00b3f9;
+    border-radius: 5px;
+    /* transform: skew(10deg, 20deg); */
+}
+
+
+
+/* ################################  AULA 5 ########################*/
+/* Transformações com CSS */
+.logo img{
+    transition: all 1s ease;
+}
+
+.logo img:hover{
+    /* transform: rotate(360deg); */
+    transform: scale(.9) rotate(360deg);
+    /* transform: skew(60deg, 50deg); */
+    /* transform: translate(-60px, -30px) */
+    
+}
+
+.icones{
+    position: absolute;
+    z-index: 1;
+    top: 110px;
+    right: 5px;
+}
+.icones .icon{
+    transition: all 1s ease;
+}
+
+.icones .icon:hover{
+    transform: translate(0px, -50px);
+}
+
+.icones span::before{
+    content: "Entre em contato";
+    color: #f7f7f7;
+    text-align: center;
+    border-radius: 4px;
+    width: 140px;
+    height: 30px;
+    display: block;
+    background-color: rgb(31, 167, 31);
+    position: absolute;
+    top: -70px;
+    right: 160px;
+    opacity: 0;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+
+/* .contato{
+    text-align: center;
+    width: 140px;
+    height: 30px;
+    background-color: rgb(31, 167, 31);
+    border-radius: 5px;
+    position: absolute;
+    top: 35px;
+    right: 160px;
+    opacity: 0;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+} */
+
+.contato p{
+    margin: 0;
+    padding: 5px;
+    font-size: 16px;
+    color: #f7f7f7;
+}
+
+.icones:hover span::before{
+    opacity: 1;
+}
