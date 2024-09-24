@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+}
+
+.cores{
+    width: 150px;
+    height: 150px;
+    background-color: #1f7267;
+    border: 2px solid rgb(139, 135, 135);
+    border-radius: 50%;
+    animation-name: movimento;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 35px;
+}
+
+.anima{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: brown;
+    margin-top: 30px;
+    animation: animado 5s linear alternate infinite;
+}
+
+.rodar{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(16, 9, 83);
+    animation: rodar .3s linear infinite;
+    animation-play-state: paused;
+}
+
+.rodar:hover{
+    animation-play-state: running;
+}
+
+
+header{
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #ddd;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+}
+
+.logo{
+    font-size: 40px;
+    font-family: arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    left: -300px;
+    animation-name: chegada;
+    animation-delay: 2s;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes chegada{
+    0%{left: -300px;}
+    80%{left: 80px;}
+    100%{left: 40px;}
+}
+
+
+
+.anima:hover{
+    animation-play-state: paused;
+}
+
+@keyframes rodar{
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+
+
+@keyframes animado{
+    0%{background-color: brown; margin-left: 0; transform: rotate(0);}
+    50%{background-color: rgb(0, 183, 255); margin-left: 40%; transform: rotate(180deg);}
+    100%{background-color: rgb(126, 42, 165); margin-left: 80%; transform: rotate(360deg);}
+}
+
+
+@keyframes movimento{
+    from{background-color: #1f7267; margin-left: 0;}
+    to{background-color: #4c2d80; margin-left: 80%;}
+}
