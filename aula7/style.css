@@ -1,21 +1,86 @@
-
 body{
-	margin: 0;
+    font-family: "Spline Sans", sans-serif;
+    margin: 0;
 }
 
-
-.foguete img{
-	margin-bottom: 20px;
-	animation: foguete 5s linear infinite;
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-
-@keyframes foguete{
-	0%{transform: rotate(0deg); margin-left: 0}
-	5%{transform: rotate(80deg); margin-left: 0; margin-top: 0;}
-	45%{transform: rotate(80deg); margin-left: 90%; margin-top: 70vh;}
-	55%{transform: rotate(-100deg); margin-left: 90%; margin-top: 67vh;}
-	95%{transform: rotate(-100deg); margin-left: 0; margin-top: 0;}
-	100%{transform: rotate(0); margin-left: 0}
+#topo{
+    background-color: #191919;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
 }
 
+.logo{
+    color: #ad58eb;
+    font-weight: bold;
+    font-size: 42px;
+    letter-spacing: -1px;
+    float: left;
+}
+
+.menu{
+    float: right;
+}
+
+.menu li{
+    display: inline-block;
+    list-style: none;
+    padding: 5px 15px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+    padding: 10px 5px;
+}
+
+.menu a:hover{
+    color: #ad58eb;
+}
+
+#principal{
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.coluna{
+    width: 16%;
+    background-color: #191919;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #ad58eb;
+    text-align: center;
+    font-size: 48px;
+    padding: 20px 0;
+    margin-top: 10px;
+    float: left;
+    box-sizing: border-box;
+}
+
+@media (max-width: 720px){
+    .coluna{
+        width: 33%;
+    }
+    .menu, .logo{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 596px){
+    .coluna{
+        width: 50%;
+    }
+}
+
+@media (max-width: 596px){
+    .coluna{
+        width: 100%;
+    }
+}
