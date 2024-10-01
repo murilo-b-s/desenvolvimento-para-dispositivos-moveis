@@ -1,99 +1,123 @@
-body{
-    margin: 0;
-}
-
 .cores{
-    width: 150px;
-    height: 150px;
-    background-color: #1f7267;
-    border: 2px solid rgb(139, 135, 135);
-    border-radius: 50%;
-    animation-name: movimento;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+	width: 150px;
+	height: 150px;
+	background: blue;
+	border: solid 2px #333;
+	animation-name: movimento;
+	animation-duration: 3s; /* duração */
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+	/* forwards - backwards - both */
+	animation-iteration-count: infinite;
+	/* [nº de repetições] - infinite */
+	animation-direction: alternate;
+	/* normal - reverse - alternate - alternate-reverse */
+	animation-delay: 5s; /* atraso */ 
 }
-
-img{
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin: 35px;
-}
-
 .anima{
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
-    background-color: brown;
-    margin-top: 30px;
-    animation: animado 5s linear alternate infinite;
+	margin-top: 30px;
+	width: 100px;
+	height: 100px;
+	border-radius: 20px;
+	background: red;
+	animation: animado 6s linear alternate infinite; 
 }
-
-.rodar{
-    width: 80px;
-    height: 80px;
-    background-color: rgb(16, 9, 83);
-    animation: rodar .3s linear infinite;
-    animation-play-state: paused;
-}
-
-.rodar:hover{
-    animation-play-state: running;
-}
-
-
-header{
-    background-color: #f7f7f7;
-    border-bottom: 2px solid #ddd;
-    padding: 20px 40px;
-    margin-bottom: 40px;
-}
-
-.logo{
-    font-size: 40px;
-    font-family: arial, sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    color: #333;
-    position: relative;
-    left: -300px;
-    animation-name: chegada;
-    animation-delay: 2s;
-    animation-duration: .5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-
-@keyframes chegada{
-    0%{left: -300px;}
-    80%{left: 80px;}
-    100%{left: 40px;}
-}
-
-
-
 .anima:hover{
-    animation-play-state: paused;
+	animation-play-state: paused;
+}
+.rodar{
+	width: 80px; 
+	height: 80px;
+	background: #000;
+	animation: rodar 0.3s linear infinite;
+	animation-play-state: paused; /* pausa a animação */
+}
+.rodar:hover{
+	animation-play-state: running; /* ativa a animação */
+}
+body{
+	margin: 0;
+}
+header{
+	background: #f7f7f7;
+	border-bottom: solid 2px #ddd;
+	padding: 20px 40px; 
+	margin-bottom: 40px;
+}
+.logo{
+	font-size: 48px;
+	font-family: arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	color: #333;
+	position: relative;
+	left: -300px;
+	animation-name: chegada;
+	animation-delay: 2s;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+.foguete img{
+	margin-bottom: 20px;
+	animation: foguete 5s linear infinite;
+}
+.loading{
+	text-align: center;
+}
+.loading .circle{
+	width: 40px;
+	height: 40px;
+	background: blue;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 40px 5px;
+	animation: load 1.5s linear alternate infinite;
+}
+.loading .circle:nth-child(2){
+	animation-delay: 1s;
+}
+.loading .circle:nth-child(3){
+	animation-delay: 2s;
+}
+.loading .circle:nth-child(4){
+	animation-delay: 3s;
+}
+.loading .circle:nth-child(5){
+	animation-delay: 4s;
+}
+
+@keyframes load{
+	0%{background: blue; transform: scale(1);}
+	50%{background: green; transform: scale(1.2);}
+	100%{background: red; transform: scale(1.4);}	
+}
+
+@keyframes foguete{
+	0%{transform: rotate(0); margin-left: 0}
+	10%{transform: rotate(45deg); margin-left: 0}
+	50%{transform: rotate(45deg); margin-left: 80%}
+	60%{transform: rotate(-140deg); margin-left: 80%}
+	95%{transform: rotate(-140deg); margin-left: 0}
+	100%{transform: rotate(0); margin-left: 0}
+}
+@keyframes chegada{
+	0%{left:-300px;}
+	90%{left: 80px;}
+	100%{left: 40px;}
 }
 
 @keyframes rodar{
-    from{transform: rotate(0);}
-    to{transform: rotate(360deg);}
+	from{transform: rotate(0)}
+	to{transform: rotate(360deg)}
 }
-
 
 @keyframes animado{
-    0%{background-color: brown; margin-left: 0; transform: rotate(0);}
-    50%{background-color: rgb(0, 183, 255); margin-left: 40%; transform: rotate(180deg);}
-    100%{background-color: rgb(126, 42, 165); margin-left: 80%; transform: rotate(360deg);}
+	0%{background: red; margin-left: 0; transform: rotate(0)}
+	50%{background: blue; margin-left: 40%; transform: rotate(180deg)}
+	100%{background: green; margin-left: 80%; transform: rotate(360deg)}
 }
-
-
 @keyframes movimento{
-    from{background-color: #1f7267; margin-left: 0;}
-    to{background-color: #4c2d80; margin-left: 80%;}
+	from{background: blue; margin-left: 0}
+	to{background: red; margin-left: 80%}
 }

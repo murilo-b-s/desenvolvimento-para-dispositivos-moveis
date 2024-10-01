@@ -1,0 +1,21 @@
+
+body{
+	margin: 0;
+}
+
+
+.foguete img{
+	margin-bottom: 20px;
+	animation: foguete 5s linear infinite;
+}
+
+
+@keyframes foguete{
+	0%{transform: rotate(0deg); margin-left: 0}
+	5%{transform: rotate(80deg); margin-left: 0; margin-top: 0;}
+	45%{transform: rotate(80deg); margin-left: 90%; margin-top: 70vh;}
+	55%{transform: rotate(-100deg); margin-left: 90%; margin-top: 67vh;}
+	95%{transform: rotate(-100deg); margin-left: 0; margin-top: 0;}
+	100%{transform: rotate(0); margin-left: 0}
+}
+
