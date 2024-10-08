@@ -63,14 +63,126 @@ body{
     box-sizing: border-box;
 }
 
+.offcanvas{
+    display: none;
+    float: right;
+    padding-top: 15px;
+}
+
+.offcanvas a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 10px;
+    height: 16px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+    transition: all .2s linear;
+}
+
+.offcanvas a::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 8px; right: 0;
+}
+
+.offcanvas a::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0; right: 0;
+}
+
+.mascara{
+    /* display: none; */
+    /* width: 250px; */
+    width: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #191919;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #fff;
+    /* transitions */
+    transition: all .5s ease;
+    opacity: .7;
+    z-index: -1; 
+}
+
+.mascara ul{
+    text-align: center;
+    padding: 0;
+    list-style: none;
+}
+
+.mascara li{
+    border-bottom: 1px dashed #f7f7f7;
+    font-size: 18px;
+    padding: 20px 10px;
+}
+
+.mascara li a{
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.mascara li a:hover{
+    color: #ad58eb;
+    transition: .3s;
+}
+
+/* botao de fechar */
+.fechar a{
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: 40px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.fechar a:hover{
+    transform: rotate(180deg);
+    transition: all .5s linear;
+}
+
+.fechar{
+    text-align: right;
+    padding: 32px 12px;
+}
+
+
+
+/* Abre o menu ao clicar em um link com o id */
+#abrir:target{
+    display: block;
+    z-index: 999;
+    opacity: 1;
+    width: 250px;
+}
+
+
+.offcanvas a:hover{
+    width: 20px;
+}
+
+
+
+
 @media (max-width: 720px){
-    .coluna{
-        width: 33%;
-    }
-    .menu, .logo{
-        width: 100%;
-        text-align: center;
-    }
+    .coluna{width: 33%;}
+    .menu{display: none;}
+    .offcanvas{display: block;}
 }
 
 @media (max-width: 596px){
