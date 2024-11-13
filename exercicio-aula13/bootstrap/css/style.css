@@ -1,0 +1,72 @@
+body{
+    background-color: #f7f7f7;
+    margin: 20px 0;
+}
+
+.linha .cards img{
+    width: 200px;
+    height: 200px;
+}
+
+.cards{
+    margin: 0 5px;
+}
+
+.linha2 .cards img{
+    width: 290px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.linha2 .cards{
+    margin: 15px;
+}
+
+.linha3 .cards img{
+    width: 600px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.linha3 .cards{
+    margin: 20px;
+}
+
+
+@media (max-width: 764px){
+    .cards{
+        margin: 0 10px;
+    }
+    .linha2 .cards img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .linha2 .cards{
+        margin: 0 5px;
+    }
+
+    .linha3 .cards img{
+        width: 420px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .linha3 .cards{
+        margin: 0 10px;
+    }
+
+    .linha1, .linha2, .linha3{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 468px){
+    .linha3 .cards img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .linha3 .cards{
+        margin: 0 10px;
+    }
+}
