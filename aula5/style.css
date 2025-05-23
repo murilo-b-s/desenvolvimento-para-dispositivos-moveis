@@ -40,7 +40,7 @@ nav{
     transition-duration: .3s;
     transition-timing-function: linear;
 }
-
+##########################################
 .submenu ul{
     width: 200px;
     background-color: #ddd;
@@ -85,7 +85,7 @@ nav{
 .menu li a:hover{
     color: #333;
 }
-
+##########################
 .principal h1{
     font-size: 20px;
     margin-bottom: 0;
